@@ -5,7 +5,7 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="sidebar__logo">
-        <Link to="/" className="sidebar__logo--link link">
+        <Link to="/Portfolio" className="sidebar__logo--link link">
           D
         </Link>
       </div>
