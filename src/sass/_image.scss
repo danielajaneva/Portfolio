@@ -1,0 +1,19 @@
+.bg-image {
+  grid-column: full-start / full-end;
+  grid-row: 1 / -1;
+  z-index: -1;
+
+  background-image: linear-gradient(
+      rgba($color-white, 0.9),
+      rgba($color-white, 0.9)
+    ),
+    url(../img/bg_photo_2.jpg);
+  background-size: cover;
+  background-position: top;
+
+  // transition: all 0.3s;
+
+  @media only screen and (max-width: $bp-large) {
+    grid-row: 2 / 3;
+  }
+}

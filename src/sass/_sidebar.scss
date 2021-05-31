@@ -1,0 +1,94 @@
+.sidebar {
+  background-color: $color-primary;
+  grid-column: sidebar-start / sidebar-end;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: $shadow-1;
+  z-index: 1;
+
+  //transition: all 0.3s;
+
+  @media only screen and (max-width: $bp-large) {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    justify-content: space-between;
+    //align-items: center;
+    flex-direction: row;
+    padding: 0 5%;
+  }
+
+  &__logo {
+    font-size: 3.5rem;
+    font-weight: 600;
+    animation: down 1s;
+
+    @media only screen and (max-width: $bp-large) {
+      animation: right 1s;
+    }
+
+    @include down;
+    @include right;
+  }
+  &__navigation {
+    transform: rotate(270deg);
+    overflow: hidden;
+
+    @media only screen and (max-width: $bp-large) {
+      transform: rotate(0deg);
+    }
+
+    &--item:link,
+    &--item:visited {
+      transform: rotate(270deg);
+      padding: 0 2rem;
+      font-size: 1.4rem;
+
+      animation: show 1s;
+      @include show;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: up 1s;
+
+    @media only screen and (max-width: $bp-large) {
+      animation: left 1s;
+    }
+
+    @include up;
+    @include left;
+
+    @media only screen and (max-width: $bp-large) {
+      flex-direction: row;
+    }
+
+    &--item:link,
+    &--item:visited {
+      padding: 0.5rem 0;
+      font-size: 1.6rem;
+
+      @media only screen and (max-width: $bp-large) {
+        padding: 0 1rem;
+      }
+    }
+  }
+}
+.link:visited,
+.link:link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $color-secondary-2;
+  transition: all 0.2s;
+
+  &:hover,
+  &:active {
+    color: $color-white;
+    text-shadow: 1px 1px 2px $color-secondary-2;
+    transform: translateX(3px);
+  }
+}

@@ -1,0 +1,24 @@
+button,
+.btn:link,
+.btn:visited {
+  background-color: $color-primary;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  font-family: $font-family-1;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 1rem 3rem;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  //for the button
+  border: none;
+  border-radius: 0;
+
+  button:hover,
+  &:hover,
+  &:active {
+    background-color: $color-primary-dark;
+  }
+}
