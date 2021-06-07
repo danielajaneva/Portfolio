@@ -22,10 +22,18 @@
     padding: 0 10%;
 
     animation: moveRight 1s;
-    @include moveRight;
+    // @include moveRight;
+
+    @media only screen and (max-width: $bp-smaller) {
+      padding: 0 5%;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      padding: 0 1%;
+    }
   }
 }
 .heading-italic {
+  filter: brightness(0.4);
   font-style: italic;
   font-weight: lighter;
   font-size: 1.4rem;
@@ -49,6 +57,9 @@
   @media only screen and (max-width: $bp-smaller) {
     font-size: 7rem;
   }
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: 6rem;
+  }
 }
 .heading-3 {
   text-transform: uppercase;
@@ -69,8 +80,16 @@
   align-items: flex-end;
   //justify-content: space-between;
   line-height: 1;
+
+  @media only screen and (max-width: $bp-smaller) {
+    padding-left: 0;
+  }
 }
 
 .padding {
   padding-left: 2rem;
+
+  @media only screen and (max-width: $bp-smaller) {
+    padding: 0;
+  }
 }

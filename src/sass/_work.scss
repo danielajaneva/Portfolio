@@ -27,7 +27,7 @@
     transition: all 0.3s;
     animation: moveUp 1s;
 
-    @include moveUp;
+    // @include moveUp;
 
     &:hover {
       transform: translateY(-5px);

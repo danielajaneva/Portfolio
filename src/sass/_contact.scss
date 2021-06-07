@@ -144,9 +144,16 @@
             border-bottom: 2px solid $color-primary;
             outline: none;
           }
+
+          // &:invalid {
+          //   border-bottom: 2px solid darkred;
+          // }
         }
       }
-
+      .error {
+        color: darkred;
+        font-size: 1.2rem;
+      }
       .subject,
       .message {
         grid-column: 1 / -1;

@@ -29,8 +29,8 @@
       animation: right 1s;
     }
 
-    @include down;
-    @include right;
+    // @include down;
+    // @include right;
   }
   &__navigation {
     transform: rotate(270deg);
@@ -40,6 +40,10 @@
       transform: rotate(0deg);
     }
 
+    // @media only screen and (max-width: $bp-smallest) {
+    //   //CHANGE TEXT TO HAMBURGER
+    // }
+
     &--item:link,
     &--item:visited {
       transform: rotate(270deg);
@@ -47,7 +51,7 @@
       font-size: 1.4rem;
 
       animation: show 1s;
-      @include show;
+      // @include show;
     }
   }
   &__info {
@@ -60,8 +64,8 @@
       animation: left 1s;
     }
 
-    @include up;
-    @include left;
+    // @include up;
+    // @include left;
 
     @media only screen and (max-width: $bp-large) {
       flex-direction: row;
