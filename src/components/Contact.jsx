@@ -10,6 +10,7 @@ const Contact = () => {
     subject: "",
     message: "",
     loading: false,
+    notification: "",
   });
 
   const onSubmit = (e) => {
@@ -30,20 +31,15 @@ const Contact = () => {
           subject: "",
           message: "",
           loading: false,
+          notification: "Your message was sent, thank you!",
         });
-
-        return (
-          <div className="notification">Your message was sent, thank you!</div>
-        );
       })
       .catch((err) => {
         console.log("FAILED...", err);
-
-        return (
-          <div className="notification">
-            Your message was not sent, try again!
-          </div>
-        );
+        setToSend({
+          ...toSend,
+          notification: "Your message was not sent, try again!",
+        });
       });
   };
 
@@ -51,26 +47,13 @@ const Contact = () => {
     setToSend({ ...toSend, [e.target.name]: e.target.value });
   };
 
-  //   <div id="form-message-warning" className="message">
-  //   Your message was not sent, try again!
-  // </div>
-  // <div id="form-message-success" className="message">
-  //   Your message was sent, thank you!
-  // </div>
-
   return (
     <>
       <div className="bg-image"></div>
       <section className="contact">
         <div className="contact__form">
           <h3 className="contact__form--heading">Contact me</h3>
-          <form
-            // method="POST"
-            // id="contactForm"
-            // name="contactForm"
-            onSubmit={onSubmit}
-            className="contactForm"
-          >
+          <form onSubmit={onSubmit} className="contactForm">
             <div className="form-group">
               <label className="label" htmlFor="name">
                 Full Name
@@ -84,6 +67,7 @@ const Contact = () => {
                 onChange={handleChange}
                 required
               />
+              {/* <span className="error">Required</span> */}
             </div>
 
             <div className="form-group">
@@ -99,6 +83,7 @@ const Contact = () => {
                 onChange={handleChange}
                 required
               />
+              {/* <span className="error">Required</span> */}
             </div>
 
             <div className="form-group subject">
@@ -114,6 +99,7 @@ const Contact = () => {
                 onChange={handleChange}
                 required
               />
+              {/* <span className="error">Required</span> */}
             </div>
 
             <div className="form-group message">
@@ -130,13 +116,14 @@ const Contact = () => {
                 onChange={handleChange}
                 required
               />
+              {/* <span className="error">Required</span> */}
             </div>
 
             <div className="form-group">
               <button className="btn btn-primary" type="submit">
                 {toSend.loading ? "Sending..." : "Send Message"}
               </button>
-              <div className="submitting"></div>
+              <div className="submitting">{toSend.notification}</div>
             </div>
           </form>
         </div>
@@ -152,8 +139,7 @@ const Contact = () => {
           </div>
           <div className="contact__info--text">
             <p>
-              <span>Address:</span> Oliver Kitanovski 9/5 , 1400 Veles,
-              Macedonia
+              <span>Address:</span> 1400 Veles, Macedonia
             </p>
           </div>
 
@@ -184,7 +170,8 @@ const Contact = () => {
           </div>
           <div className="contact__info--text">
             <p>
-              <span>Website: </span> <a href="/">danielajaneva.com</a>
+              <span>Website: </span>
+              <a href="/">danielajaneva.github.io/Portfolio/</a>
             </p>
           </div>
         </div>
