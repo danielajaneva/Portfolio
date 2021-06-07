@@ -13,13 +13,13 @@ const projects = [
   {
     name: "Natours",
     img: img1,
-    description: "Place where You can find a home that suits your lifestyle.",
+    description: "Inspire yourself, travel, see what nature can do for you.",
     linkTo: "https://danielajaneva.github.io/Natours/",
   },
   {
     name: "Trillo",
     img: img2,
-    description: "Place where You can find a home that suits your lifestyle.",
+    description: "Choose your travel destination and the hotel you wanna stay.",
     linkTo: "https://danielajaneva.github.io/Trillo/",
   },
   {
@@ -31,31 +31,31 @@ const projects = [
   {
     name: "TinDog",
     img: img4,
-    description: "Place where You can find a home that suits your lifestyle.",
+    description: "Find new and interesting dogs nearby and a new friends.",
     linkTo: "https://danielajaneva.github.io/TinDog/",
   },
   {
     name: "Widgets",
     img: img5,
-    description: "Place where You can find a home that suits your lifestyle.",
+    description: "App with more widgets: translate, search Google and more...",
     linkTo: "https://danielajaneva.github.io/Widgets/",
   },
   {
     name: "Youtube",
     img: img6,
-    description: "Place where You can find a home that suits your lifestyle.",
+    description: "Search and stream videos/playlists from youtube.",
     linkTo: "https://danielajaneva.github.io/searchYoutube/",
   },
   {
     name: "Keeper",
     img: img7,
-    description: "Place where You can find a home that suits your lifestyle.",
+    description: "Write more , forget less, with this ToDo app.",
     linkTo: "https://danielajaneva.github.io/Keeper/",
   },
   {
     name: "Unsplash",
     img: img8,
-    description: "Place where You can find a home that suits your lifestyle.",
+    description: "Search and download HD images from unsplash.",
     linkTo: "https://danielajaneva.github.io/searchImages/",
   },
 ];
