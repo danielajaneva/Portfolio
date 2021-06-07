@@ -1,5 +1,7 @@
 import React from "react";
 
+import Footer from "./Footer";
+
 const Home = () => {
   return (
     <section className="home">
@@ -26,6 +28,7 @@ const Home = () => {
         </div>
 
         <span className="heading-italic">{"</html>"}</span>
+        <Footer />
       </div>
     </section>
   );

@@ -192,6 +192,7 @@ body {
 }
 
 .home {
+  position: relative;
   grid-column: full-start/full-end;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0.9))), url(../img/bg_photo.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(../img/bg_photo.jpg);
@@ -624,6 +625,16 @@ body {
 .about__info--skills .skill__name {
   font-size: 2rem;
   text-transform: uppercase;
+}
+
+.footer {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  -webkit-filter: brightness(0.4);
+          filter: brightness(0.4);
+  font-weight: lighter;
+  font-size: 1.4rem;
 }
 
 .bg-image {
