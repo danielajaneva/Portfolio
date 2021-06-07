@@ -71,7 +71,12 @@ const Work = () => {
               <img className="project__img" src={img} alt="projectPhoto" />
               <div className="project__name">{name}</div>
               <div className="project__description">{description}</div>
-              <a href={linkTo} className="btn project__btn">
+              <a
+                href={linkTo}
+                className="btn project__btn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 View project
               </a>
             </div>
