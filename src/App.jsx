@@ -15,9 +15,9 @@ const App = () => {
       <BrowserRouter>
         <Sidebar />
         <Route path="/Portfolio" exact component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/work" component={Work} />
-        <Route path="/contact" component={Contact} />
+        <Route path="/Portfolio/about" component={About} />
+        <Route path="/Portfolio/work" component={Work} />
+        <Route path="/Portfolio/contact" component={Contact} />
       </BrowserRouter>
     </div>
   );
