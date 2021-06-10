@@ -1,26 +1,44 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Sidebar = () => {
+  const [windowSize, setWindowSize] = useState({
+    width: undefined,
+  });
+
+  const responsiveContent = (icon, name) =>
+    windowSize.width < 600 ? <i className={icon}></i> : <span>{name}</span>;
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+      });
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, [windowSize.width]);
+
   return (
     <div className="sidebar">
       <div className="sidebar__logo">
-        <Link to="/Portfolio" className="sidebar__logo--link link">
+        <Link to="/" className="sidebar__logo--link link">
           D
         </Link>
       </div>
       <nav className="sidebar__navigation">
-        <Link
-          to="/Portfolio/contact"
-          className="sidebar__navigation--item link"
-        >
-          Contact
+        <Link to="/contact" className="sidebar__navigation--item link">
+          {responsiveContent("far fa-address-card", "Contact")}
         </Link>
-        <Link to="/Portfolio/work" className="sidebar__navigation--item link">
-          Work
+        <Link to="/work" className="sidebar__navigation--item link">
+          {responsiveContent("fas fa-code", "Work")}
         </Link>
-        <Link to="/Portfolio/about" className="sidebar__navigation--item link">
-          About
+        <Link to="/about" className="sidebar__navigation--item link">
+          {responsiveContent("far fa-user-circle", "About")}
         </Link>
       </nav>
       <div className="sidebar__info">
