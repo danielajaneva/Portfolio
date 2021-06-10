@@ -52,6 +52,10 @@
 
       animation: show 1s;
       // @include show;
+
+      @media only screen and (max-width: $bp-small) {
+        font-size: $default-font-size;
+      }
     }
   }
   &__info {

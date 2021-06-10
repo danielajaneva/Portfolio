@@ -136,6 +136,11 @@ body {
   -webkit-animation: show 1s;
           animation: show 1s;
 }
+@media only screen and (max-width: 37.5em) {
+  .sidebar__navigation--item:link, .sidebar__navigation--item:visited {
+    font-size: 1.6rem;
+  }
+}
 .sidebar__info {
   display: -webkit-box;
   display: -ms-flexbox;
