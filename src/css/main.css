@@ -335,12 +335,14 @@ body {
   -webkit-animation: moveUp 1s;
           animation: moveUp 1s;
 }
-.work .project:hover {
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
-  overflow: hidden;
-  -webkit-box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.3);
-          box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.3);
+@media (hover: hover) and (pointer: fine) {
+  .work .project:hover {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+    overflow: hidden;
+    -webkit-box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.3);
+            box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.3);
+  }
 }
 .work .project__img {
   width: 100%;

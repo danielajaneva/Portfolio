@@ -29,10 +29,12 @@
 
     // @include moveUp;
 
-    &:hover {
-      transform: translateY(-5px);
-      overflow: hidden;
-      box-shadow: $shadow-3;
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        transform: translateY(-5px);
+        overflow: hidden;
+        box-shadow: $shadow-3;
+      }
     }
 
     &__img {
